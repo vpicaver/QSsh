@@ -1,6 +1,8 @@
 # QSsh
 Qt interface to libssh2
 
+Forked code from: https://github.com/synacker/daggy
+
 ## Example usage:
 ```
     QSsh::Settings settings;
