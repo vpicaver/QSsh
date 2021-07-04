@@ -15,7 +15,7 @@ find_package(Qt5 COMPONENTS Core Network REQUIRED)
 find_package(Libssh2 REQUIRED)
 
 file(GLOB libQSshCPP src/*.cpp)
-file(GLOB libQSshH src/*.h)
+file(GLOB libQSshH src/QSsh/*.h)
 add_library(QSsh STATIC ${libQSshCPP} ${libQSshH})
 target_link_libraries(QSsh
     PUBLIC
@@ -23,3 +23,5 @@ target_link_libraries(QSsh
     Qt5::Network
     Libssh2::Libssh2
     )
+target_include_directories(QSsh
+    PUBLIC src)

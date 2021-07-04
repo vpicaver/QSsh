@@ -71,6 +71,8 @@ public:
 
     QString exitSignal() const;
 
+    std::error_code lastSshError() const;
+
 signals:
     void ssh2Error(std::error_code ssh2_error);
 

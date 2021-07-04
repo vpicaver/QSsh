@@ -74,6 +74,8 @@ public:
     int channelsCount() const;
     int openChannelsCount() const;
 
+    std::error_code lastSshError() const;
+
 signals:
     void sessionStateChanged(SessionStates ssh2_state);
     void ssh2Error(std::error_code ssh2_error);
@@ -123,4 +125,5 @@ private:
     LIBSSH2_SESSION* ssh2_session_;
     LIBSSH2_KNOWNHOSTS* known_hosts_;
 };
-}
+
+};

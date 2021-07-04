@@ -22,11 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Client.h"
+#include "QSsh/Client.h"
 
-#include "Channel.h"
-#include "Process.h"
-#include "Debug.h"
+#include "QSsh/Channel.h"
+#include "QSsh/Process.h"
+#include "QSsh/Debug.h"
 
 //Qt includes
 #include <QTimer>
@@ -515,4 +515,9 @@ const std::error_code& Client::setSessionState(const SessionStates& new_state,
     setLastError(error_code);
     setSessionState(new_state);
     return error_code;
+}
+
+std::error_code QSsh::Client::lastSshError() const
+{
+    return last_error_;
 }

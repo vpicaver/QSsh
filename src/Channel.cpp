@@ -22,10 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Channel.h"
+#include "QSsh/Channel.h"
 
-#include "Client.h"
-#include "Debug.h"
+#include "QSsh/Client.h"
+#include "QSsh/Debug.h"
 
 //libssh2 includes
 #include "libssh2.h"
@@ -265,6 +265,11 @@ void Channel::checkChannelData(const Channel::ChannelStream& stream_id)
 QString Channel::exitSignal() const
 {
     return exit_signal_;
+}
+
+std::error_code Channel::lastSshError() const
+{
+    return last_error_;
 }
 
 std::error_code Channel::setLastError(const std::error_code& error_code)

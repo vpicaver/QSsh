@@ -22,8 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Debug.h"
-#include "Types.h"
+#include "QSsh/Debug.h"
+#include "QSsh/Types.h"
 
 //Qt includes
 #include <QDebug>

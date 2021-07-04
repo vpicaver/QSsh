@@ -22,10 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Process.h"
+#include "QSsh/Process.h"
 
-#include "Client.h"
-#include "Debug.h"
+#include "QSsh/Client.h"
+#include "QSsh/Debug.h"
 
 //libssh2
 #include "libssh2.h"
